@@ -18,3 +18,6 @@ def bfsOfGraph(self, V: int, adj: List[List[int]]) -> List[int]:
             q.append(it)  # store in the queue
 
     return bfs
+
+#Problem link
+# https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1

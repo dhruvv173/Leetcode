@@ -1,5 +1,6 @@
 from typing import List
 class Solution:
+    #Cycle detection using DFS
     def isCycle(self, V: int, adj: List[List[int]]) -> bool:
         vis = [0] * V
         for i in range(V):

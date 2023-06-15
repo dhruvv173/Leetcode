@@ -8,11 +8,11 @@ class Solution:
         for i in range(V):
             if not vis[i]:
                 self.dfs(i, adj, vis, pathVis, check)
-        for i in range(V):
-            if check[i]:
-                safeNodes.append(i)
-        return safeNodes
-        #return [i for i in range(V) if check[i]] can also do this to save space
+        # for i in range(V):
+        #     if check[i]:
+        #         safeNodes.append(i)
+        # return safeNodes
+        return [i for i in range(V) if check[i]] #can also do this to save space
 
 
     def dfs(self, node, adj, vis, pathVis, check):

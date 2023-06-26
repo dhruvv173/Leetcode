@@ -16,18 +16,6 @@ class Solution:
                 heappop(maxheap)
         return maxheap[0] * -1
 
-
-# def getKSmallest(arr, k):
-#     maxheap = []
-#     heapify(maxheap)
-
-#     for i in arr:
-#         heappush(maxheap, -1 * i)
-#         if len(maxheap) > k:
-#             heappop(maxheap)
-    
-#     return maxheap[0]  *  -1
-
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3

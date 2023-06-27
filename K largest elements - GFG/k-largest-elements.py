@@ -1,9 +1,9 @@
-#User function Template for python3
 from heapq import heapify, heappop, heappush
 
 class Solution:
     def kLargest(self, li, n, k):
         minHeap = []
+        res = []
         heapify(minHeap)
         
         for i in li:
@@ -11,7 +11,11 @@ class Solution:
             if len(minHeap) > k:
                 heappop(minHeap)
         
-        return sorted(minHeap, reverse=True) #since we've to return in descending order else return minHeap
+        while minHeap:
+            res.append(heappop(minHeap))
+        
+        return res[::-1]
+
 
 
 #{ 

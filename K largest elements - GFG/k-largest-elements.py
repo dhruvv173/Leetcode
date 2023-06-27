@@ -11,11 +11,7 @@ class Solution:
             if len(minHeap) > k:
                 heappop(minHeap)
         
-        result = []
-        for _ in range(k):
-            result.append(heappop(minHeap))
-        
-        return result[::-1]
+        return sorted(minHeap, reverse=True) #since we've to return in descending order else return minHeap
 
 
 #{ 

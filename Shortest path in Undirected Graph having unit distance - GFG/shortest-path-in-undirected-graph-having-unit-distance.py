@@ -22,12 +22,12 @@ class Solution:
 
         # Updated shortest distances are stored in the resultant list 'ans'.
         # Unreachable nodes are marked as -1.
-        ans = [-1] * N
+        # ans = [-1] * N
         for i in range(N):
-            if dist[i] != float('inf'):
-                ans[i] = dist[i]
+            if dist[i] == float('inf'):
+                dist[i] = -1
 
-        return ans
+        return dist
 
 #{ 
  # Driver Code Starts

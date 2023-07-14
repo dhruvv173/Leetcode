@@ -10,7 +10,7 @@ class Solution:
             return 0
         q = deque()
         q.append((start, 0))
-        dist = [float("inf")] * 100001
+        dist = [float("inf")] * 100000
         dist[start] = 0
 
         while q:

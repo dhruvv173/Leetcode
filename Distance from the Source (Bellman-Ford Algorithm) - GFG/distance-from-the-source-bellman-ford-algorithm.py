@@ -10,21 +10,19 @@ class Solution:
     '''
     def bellman_ford(self, V, edges, S):
         #code here
-        dist = [float('inf')] * V
+        maxi = 100000000
+        dist = [maxi] * V
         dist[S] = 0
         
         for _ in range(V - 1):
             for u, v, w in edges:
-                if dist[u] != float('inf') and dist[u] + w < dist[v]:
+                if dist[u] != maxi and dist[u] + w < dist[v]:
                     dist[v] = dist[u] + w
         
           # Check for negative weight cycles.
         for u, v, w in edges:
-            if dist[u] != float('inf') and dist[u] + w < dist[v]:
+            if dist[u] != maxi and dist[u] + w < dist[v]:
                 return [-1]
-        for v in range(V):
-            if dist[v] == float('inf'):
-                dist[v] = 100000000
         return dist
                 
 #{ 

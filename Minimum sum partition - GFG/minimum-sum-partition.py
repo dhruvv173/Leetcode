@@ -13,7 +13,7 @@ class Solution:
                 else:
                     dp[i][j] = dp[i-1][j]
     
-        return dp[n][:(k//2)+1]
+        return dp[n][:(k//2)+1]  # return the first half of the last row
     
     def minDifference(self, arr, n):
     

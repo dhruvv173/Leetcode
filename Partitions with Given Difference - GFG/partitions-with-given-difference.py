@@ -10,7 +10,7 @@ class Solution:
         # Code here
         MOD = 10**9 + 7
         sum_val = sum(arr)
-        if (d + sum_val) % 2 != 0:
+        if (d + sum_val) % 2:
             return 0
         t = (d + sum_val) // 2
         

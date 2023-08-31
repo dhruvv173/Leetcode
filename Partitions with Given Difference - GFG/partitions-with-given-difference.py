@@ -15,7 +15,7 @@ class Solution:
         t = (d + sum_val) // 2
         
         # Find count of subsets with sum equal to t
-        dp = [[0] * (t + 1) for _ in range(n + 1)]
+        dp = [[0 for _ in range(t + 1)] for _ in range(n + 1)]
         dp[0][0] = 1
         
         for i in range(1, n + 1):

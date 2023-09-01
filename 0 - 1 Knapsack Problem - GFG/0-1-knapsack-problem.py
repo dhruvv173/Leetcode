@@ -6,12 +6,7 @@ class Solution:
     def knapSack(self, W, wt, val, n):
         t = [[0 for _ in range(W + 1)] for _ in range(n + 1)]
     
-        # Initialize matrix
-        for i in range(W + 1):
-            t[0][i] = 0
-        for j in range(n + 1):
-            t[j][0] = 0
-    
+
         # Choice Diagram to code
         for i in range(1, n + 1):
             for j in range(1, W + 1):
@@ -23,6 +18,9 @@ class Solution:
                     t[i][j] = 0 + t[i - 1][j]
         
         return t[n][W]
+
+
+
 
 
 #{ 
